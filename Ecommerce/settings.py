@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.environ.get('DB_NAME', 'ecommerce_db'),
         'USER': os.environ.get('DB_USER', 'postgres'),
-        'PASSWORD': os.environ.get('DB_PASS', 'deway'),
+        'PASSWORD': os.environ.get('DB_PASS', 'root'),
         'HOST': 'localhost',
         'PORT': '5432',
     }
