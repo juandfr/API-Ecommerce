@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Book, Product
+from .models import Category, Book, Product, Cart
 
 admin.site.site_header = 'E-commerce'
 
@@ -27,5 +27,10 @@ class BookAdmin(admin.ModelAdmin):
     list_filter = (
         'status', 'category__title', 'date_created'
     )
+
+@admin.register(Cart)
+class CartAdmin(admin.ModelAdmin):
+    list_display = ('cart_id', 'created_at')
+    search_fields = ('cart_id',)
 
 
